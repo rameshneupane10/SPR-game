@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scissor Paper Rock</title>
+    <link rel="stylesheet" href="spr.css">
+    
+</head>
+<body>
+    
+    <marquee  direction="right"><h1>SCISSOR PAPER ROCK GAME</h1></marquee>
+
+    <div class="split player" >
+       
+
+            <input type="button" value="Scissor" id="Scissor" onclick="Scissor()" >
+            <input type="button" value="Paper" id="Paper" onclick="Paper()">
+            <input type="button" value="Rock" id="Rock" onclick="Rock()">
+
+            <img id="icon1" src="scissor.png" alt="Scissor" height="200px" width="180px" style="display: none;">
+            <img id="icon2" src="paper.png" alt="paper" height="200px" width="180px" style="display: none;">
+            <img id="icon3" src="rock.png" alt="rock" height="200px" width="180px" style="display: none;">
+            
+                <p id="result"></p>
+                <h2 id="winner"></h2>
+        </div>
+        
+        <div class="split opponent">
+
+        <input type="button" value="Scissor" id="Scissor"  >
+        <input type="button" value="Paper" id="Paper">
+        <input type="button" value="Rock" id="Rock" >
+    
+        <p id="result"></p>
+        <h2 id="winner"></h2>
+        <img id="icon4" src="scissor.png" alt="Scissor" height="200px" width="180px" style="display: none;">
+        <img id="icon5" src="paper.png" alt="paper" height="200px" width="180px" style="display: none;">
+        <img id="icon6" src="rock.png" alt="rock" height="200px" width="180px" style="display: none;">
+        </div>    
+</body>
+<script src="spr.js"></script>
+</html>
