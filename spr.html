@@ -13,16 +13,15 @@
 
     <div class="split player" >
        
-
-            <input type="button" value="Scissor" id="Scissor" onclick="Scissor()" >
-            <input type="button" value="Paper" id="Paper" onclick="Paper()">
-            <input type="button" value="Rock" id="Rock" onclick="Rock()">
+            <input type="button" value="Scissor" id="Scissor" onclick="playerchoice(0)" >
+            <input type="button" value="Paper" id="Paper" onclick="playerchoice(1)">
+            <input type="button" value="Rock" id="Rock" onclick="playerchoice(2)">
 
             <img id="icon1" src="scissor.png" alt="Scissor" height="200px" width="180px" style="display: none;">
             <img id="icon2" src="paper.png" alt="paper" height="200px" width="180px" style="display: none;">
             <img id="icon3" src="rock.png" alt="rock" height="200px" width="180px" style="display: none;">
             
-                <p id="result"></p>
+                <p><span id="result">Select a option</span></p>
                 <h2 id="winner"></h2>
         </div>
         

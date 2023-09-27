@@ -1,64 +1,28 @@
-function Scissor() {
-    var pick =0;
+function playerchoice(pick) {
     var arr = ["Scissor", "Paper", "Rock"];
     var a = Math.floor(Math.random() * 3);
     document.getElementById("result").innerHTML = arr[a];
     display(a);
-    if(pick==a)
+    if(pick===a)
     {
         document.getElementById("winner").innerHTML = "DRAW";    
     }
-    else if(a==1)
+ else if ((pick + 1) % 3 === a) {
+    document.getElementById("winner").textContent = "YOU WON!!!";
+} else {
+    document.getElementById("winner").textContent = "YOU LOSE!!!";
+}    
+    if(pick===0)
     {
-        document.getElementById("winner").innerHTML = "YOU WON!!!";
-    }
+        document.getElementById('icon1').style.display = "block";
+    }   
+    else if(pick==1)
+    {
+        document.getElementById('icon2').style.display = "block";
+    }   
     else{
-        document.getElementById("winner").innerHTML = "YOU LOSE!!!";
-    }  
-    document.getElementById('icon1').style.display = "block";   
-                             
-}
-
-function Paper() {
-    var pick =1;
-    var arr = ["Scissor", "Paper", "Rock"];
-    var a = Math.floor(Math.random() * 3);
-    document.getElementById("result").innerHTML = arr[a];
-    display(a);
-    if(pick==a)
-    {
-        document.getElementById("winner").innerHTML = "DRAW";
-       
-    }
-    else if(a==2)
-    {
-        document.getElementById("winner").innerHTML = "YOU WON!!!";
-    }
-    else{
-        document.getElementById("winner").innerHTML = "YOU LOSE!!!";
-    }
-    document.getElementById('icon2').style.display = "block";
-
-}
-function Rock() {
-    var pick =2;
-    var arr = ["Scissor", "Paper", "Rock"];                     // scissor=0 , paper =1  ,rock =2
-    var a = Math.floor(Math.random() * 3);
-    document.getElementById("result").innerHTML = arr[a];
-    display(a);
-    if(pick==a)
-    {
-        document.getElementById("winner").innerHTML = "DRAW";
-    }
-    else if(a==0)
-    {
-        document.getElementById("winner").innerHTML = "YOU WON!!!";
-    }
-    else{
-        document.getElementById("winner").innerHTML = "YOU LOSE!!!";
-    }
-    document.getElementById('icon3').style.display = "block";
-   
+        document.getElementById('icon3').style.display = "block";
+    }                     
 }
 function display(a) {                      
     
@@ -80,4 +44,3 @@ function display(a) {
         document.getElementById('icon6').style.display = "block";
     }
 }
-
